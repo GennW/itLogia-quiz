@@ -1,0 +1,114 @@
+.form {
+    padding: 140px 123px;
+}
+
+.form .container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.form-content {
+    max-width: 530px;
+}
+
+
+.form-details {
+    margin-top: 60px;
+    max-width: 485px;
+}
+
+.form-group {
+    position: relative;
+    border: 1px solid #C1BBBB;
+    background: #FFF;
+    padding: 12px 23px 13px 23px;
+    width: 485px;
+    height: 74px;
+    box-sizing: border-box;
+    transition: .2s ease all;
+}
+
+.form-input {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    font-family: 'Museo Sans Cyrl Bold', sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    color: #6933DC;
+}
+
+.form-lable {
+    color: #333;
+    font-size: 18px;
+    line-height: 22px;
+    position: absolute;
+    left: 23px;
+    top: 26px;
+    transition: .2s ease all;
+}
+
+.form-input:focus~.form-lable,
+.form-input:not(:focus):valid~.form-lable {
+    top: 12px;
+}
+
+/*
+.form-input:focus~.form-lable - этот селектор применяется к метке 
+(.form-lable), которая следует посредственно после поля ввода 
+(.form-input), когда поле ввода получает фокус. Символ "~" означает 
+"следующий сестринский элемент", то есть метка, которая находится 
+непосредственно после поля ввода, будет выбрана. 
+
+.form-input:not(:focus):valid~.form-lable - Этот селектор применяется 
+к метке (.form-lable), которая следует непосредственно после поля 
+ввода (.form-input), когда поле ввода не имеет фокуса (:not(:focus)) 
+и поле валидно (тогда когда не пустой так как required должен быть заполнен) (:valid).
+*/
+
+.form-input:valid,
+.form-input:focus {
+    margin-top: 27px;
+    height: auto;
+}
+
+/*уменьшаем высоту height: auto так как .form-input height: 100%;*/
+
+
+.form-group:focus-within {
+    border-left: 5px solid #6933DC;
+}
+/* focus-within так как фокус к input но в форме есть lable   */
+
+
+.form-agree {
+    margin-top: 15px;
+    color: #333;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.form-agree input {
+    top: 1px;
+    position: relative;
+}
+
+.form-agree input,
+.form-agree label {
+    cursor: pointer;
+}
+
+.form-button {
+    margin-top: 30px;
+}
+
+.btn {}
+
+.form-link {
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 14px;
+}
